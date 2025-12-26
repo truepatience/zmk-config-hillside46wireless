@@ -25,28 +25,12 @@
 #define Redo   LC(Y)
 
 / {
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        tri_layer {
-            if-layers = <1 1>;
-            then-layer = <2>;
-        };
-    };
-
-    behaviors {
-        td0: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&sk LSHIFT>, <&caps_word>, <&kp CAPS>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 
     keymap {
         compatible = "zmk,keymap";
 
-        Home {
+        home_layer {
             /* QWERTZ
  * -------------------------------------------------------------------------------------------------------------------------------------
  * | `     |   Q   |   W   |   E   |   R   |   T   |-----------------------------------|   Z   |   U   |   I   |   O   |   P   | BKSPC |
@@ -63,7 +47,7 @@
             >;
         };
 
-        NumSym {
+        numsym_layer {
             /* SYM
  * -------------------------------------------------------------------------------------------------------------------------------------
  * |       |   !   |   @   |   #   |   $   |   %   |-----------------------------------|   ^   |   &   |   *   |   (   |   )   |       |
@@ -80,7 +64,7 @@
             >;
         };
 
-        FuncSym {
+        symfunc_layer {
             /* ADJUST
  * -------------------------------------------------------------------------------------------------------------------------------------
  * | RESET |  F9   |  F10  |  F11  |  F12  |       |-----------------------------------| CMK   | QWERTZ|       |       |       | RESET |
@@ -97,7 +81,7 @@
             >;
         };
 
-        LEDs {
+        led_layer {
             bindings = <
 &trans  &trans           &trans           &trans           &trans           &trans                                                              &trans                             &trans           &trans           &trans           &trans           &trans
 &trans  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_ON   &rgb_ug RGB_COLOR_HSB(51,100,50)                                    &rgb_ug RGB_COLOR_HSB(119,100,42)  &rgb_ug RGB_OFF  &rgb_ug RGB_BRD  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &trans
