@@ -26,6 +26,22 @@
 / {
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
+    behaviors {
+        LALT_LGUI: LALT_LGUI {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LALT_LGUI";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT>, <&kp LEFT_GUI>;
+        };
+
+        RALT_RGUI: RALT_RGUI {
+            compatible = "zmk,behavior-tap-dance";
+            label = "RALT_RGUI";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_ALT>, <&kp RIGHT_GUI>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -39,10 +55,10 @@
  */
 
             bindings = <
-&kp TAB     &kp Q  &kp W  &kp E  &kp R     &kp T                                                 &kp Y      &kp U     &kp I      &kp O    &kp P           &kp BACKSPACE
-&kp LSHIFT  &kp A  &kp S  &kp D  &kp F     &kp G                                                 &kp H      &kp J     &kp K      &kp L    &kp APOSTROPHE  &kp RSHIFT
-&kp LCTRL   &kp Z  &kp X  &kp C  &kp V     &kp B      &to 1                             &to 2    &kp N      &kp M     &kp COMMA  &kp DOT  &kp FSLH        &kp RCTRL
-                                 &kp LALT  &kp ENTER  &kp HOME  &kp PG_UP    &kp PG_DN  &kp END  &kp SPACE  &kp RALT
+&mt ESCAPE TAB  &kp Q  &kp W  &kp E  &kp R       &kp T                                                 &kp Y      &kp U       &kp I      &kp O    &kp P           &kp BACKSPACE
+&kp LSHIFT      &kp A  &kp S  &kp D  &kp F       &kp G                                                 &kp H      &kp J       &kp K      &kp L    &kp APOSTROPHE  &kp RSHIFT
+&kp LCTRL       &kp Z  &kp X  &kp C  &kp V       &kp B      &to 1                             &to 2    &kp N      &kp M       &kp COMMA  &kp DOT  &kp FSLH        &kp RCTRL
+                                     &LALT_LGUI  &kp ENTER  &kp HOME  &kp PG_UP    &kp PG_DN  &kp END  &kp SPACE  &RALT_RGUI
             >;
         };
 
