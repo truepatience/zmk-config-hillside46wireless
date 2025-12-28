@@ -41,27 +41,6 @@
             bindings = <&kp RIGHT_ALT>, <&kp RIGHT_GUI>;
         };
 
-        COMMA_SEMICOLON: COMMA_SEMICOLON {
-            compatible = "zmk,behavior-tap-dance";
-            label = "COMMA_SEMICOLON";
-            #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp SEMICOLON>;
-        };
-
-        PERIOD_COLON: PERIOD_COLON {
-            compatible = "zmk,behavior-tap-dance";
-            label = "PERIOD_COLON";
-            #binding-cells = <0>;
-            bindings = <&kp PERIOD>, <&kp COLON>;
-        };
-
-        QUESTION_PIPE: QUESTION_PIPE {
-            compatible = "zmk,behavior-tap-dance";
-            label = "QUESTION_PIPE";
-            #binding-cells = <0>;
-            bindings = <&kp QUESTION>, <&kp PIPE>;
-        };
-
         OPEN_PAREN_SQBRKT: OPEN_PAREN_SQBRKT {
             compatible = "zmk,behavior-tap-dance";
             label = "OPEN_PAREN_SQBRKT";
@@ -108,6 +87,33 @@
             compatible = "zmk,behavior-mod-morph";
             label = "BACKSPACE_DELETE";
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        COMMA_SEMICOLON: COMMA_SEMICOLON {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMA_SEMICOLON";
+            bindings = <&kp KP_COMMA>, <&kp SEMICOLON>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        PERIOD_COLON: PERIOD_COLON {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PERIOD_COLON";
+            bindings = <&kp PERIOD>, <&kp COLON>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        QUESTION_PIPE: QUESTION_PIPE {
+            compatible = "zmk,behavior-mod-morph";
+            label = "QUESTION_PIPE";
+            bindings = <&kp QUESTION>, <&kp PIPE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
