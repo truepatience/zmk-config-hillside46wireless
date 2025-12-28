@@ -59,7 +59,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "COMMA_SEMICOLON";
             #binding-cells = <0>;
-            bindings = <&kp KP_COMMA>, <&kp SEMICOLON>;
+            bindings = <&kp COMMA>, <&kp SEMICOLON>;
         };
 
         PERIOD_COLON: PERIOD_COLON {
@@ -122,7 +122,7 @@
 
             bindings = <
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4   &kp NUMBER_5                                     &kp NUMBER_6      &kp NUMBER_7    &kp NUMBER_8    &kp NUMBER_9     &kp NUMBER_0  &trans
-&trans  &trans        &trans        &trans        &kp BACKSLASH  &kp LESS_THAN                                    &kp GREATER_THAN  &kp SLASH       &kp UP_ARROW    &trans           &trans        &trans
+&trans  &trans        &trans        &trans        &kp BACKSLASH  &kp LESS_THAN                                    &kp GREATER_THAN  &kp SLASH       &kp UP_ARROW    &kp MINUS        &kp EQUAL     &trans
 &trans  &trans        &trans        &trans        &trans         &trans         &to 2                     &to 0   &trans            &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans        &trans
                                                   &trans         &trans         &trans  &trans    &trans  &trans  &trans            &trans
             >;
@@ -139,7 +139,7 @@
 
             bindings = <
 &rgb_ug RGB_EFF  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_ON  &rgb_ug RGB_COLOR_HSB(47,100,50)                                    &rgb_ug RGB_COLOR_HSB(91,100,31)  &rgb_ug RGB_OFF  &rgb_ug RGB_BRD  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_EFR
-&kp F1           &kp F2           &kp F3           &kp F4           &kp F5          &kp F6                                                              &kp F7                            &kp F8           &kp F9           &kp F10          &kp F11          &kp F12
+&none            &kp F2           &kp F3           &kp F4           &kp F5          &kp F6                                                              &kp F7                            &kp F8           &kp F9           &kp F10          &kp F11          &kp F12
 &sys_reset       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3    &bt BT_SEL 4                      &to 0                     &to 1   &bt BT_CLR_ALL                    &none            &none            &none            &none            &bootloader
                                                                     &trans          &trans                            &trans  &trans    &trans  &trans  &trans                            &trans
             >;
