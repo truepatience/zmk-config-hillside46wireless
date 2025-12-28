@@ -95,7 +95,7 @@
         COMMA_SEMICOLON: COMMA_SEMICOLON {
             compatible = "zmk,behavior-mod-morph";
             label = "COMMA_SEMICOLON";
-            bindings = <&kp KP_COMMA>, <&kp SEMICOLON>;
+            bindings = <&kp DE_COMMA>, <&kp SEMICOLON>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
