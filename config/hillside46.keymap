@@ -69,20 +69,6 @@
             bindings = <&kp RIGHT_SHIFT>, <&kp CAPSLOCK>;
         };
 
-        NINE_MINUS_UNDERSCORE: NINE_MINUS_UNDERSCORE {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NINE_MINUS_UNDERSCORE";
-            #binding-cells = <0>;
-            bindings = <&kp KP_NUMBER_9>, <&kp MINUS>;
-        };
-
-        ZERO_EQUALS_PLUS: ZERO_EQUALS_PLUS {
-            compatible = "zmk,behavior-tap-dance";
-            label = "ZERO_EQUALS_PLUS";
-            #binding-cells = <0>;
-            bindings = <&kp KP_NUMBER_0>, <&kp EQUAL>;
-        };
-
         BACKSPACE_DELETE: BACKSPACE_DELETE {
             compatible = "zmk,behavior-mod-morph";
             label = "BACKSPACE_DELETE";
@@ -118,6 +104,24 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        NINE_PLUS: NINE_PLUS {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NINE_PLUS";
+            bindings = <&kp KP_NUMBER_9>, <&kp PLUS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ZERO_EQUALS: ZERO_EQUALS {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ZERO_EQUALS";
+            bindings = <&kp KP_NUMBER_0>, <&kp KP_EQUAL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -135,7 +139,7 @@
             bindings = <
 &mt ESCAPE TAB    &kp Q  &kp W  &kp E  &kp R       &kp T                                                       &kp Y      &kp U       &kp I             &kp O          &kp P           &BACKSPACE_DELETE
 &LEFT_SHIFT_CAPS  &kp A  &kp S  &kp D  &kp F       &kp G                                                       &kp H      &kp J       &kp K             &kp L          &kp APOSTROPHE  &RIGHT_SHIFT_CAPS
-&kp LCTRL         &kp Z  &kp X  &kp C  &kp V       &kp B      &to 1                                   &to 2    &kp N      &kp M       &COMMA_SEMICOLON  &PERIOD_COLON  &QUESTION_PIPE  &kp RCTRL
+&kp LCTRL         &kp Z  &kp X  &kp C  &kp V       &kp B      &to 1                                   &to 2    &kp N      &kp M       &COMMA_SEMICOLON  &PERIOD_COLON  &kp MINUS       &kp RCTRL
                                        &LALT_LGUI  &kp ENTER  &kp HOME  &kp PAGE_UP    &kp PAGE_DOWN  &kp END  &kp SPACE  &RALT_RGUI
             >;
         };
@@ -150,10 +154,10 @@
  */
 
             bindings = <
-&trans  &kp NUMBER_1  &kp NUMBER_2     &kp NUMBER_3  &kp NUMBER_4        &kp NUMBER_5                                     &kp NUMBER_6      &kp NUMBER_7         &kp NUMBER_8    &NINE_MINUS_UNDERSCORE  &ZERO_EQUALS_PLUS  &trans
-&trans  &trans        &kp PAUSE_BREAK  &kp INSERT    &OPEN_PAREN_SQBRKT  &kp BACKSLASH                                    &kp SLASH         &CLOSE_PAREN_SQBRKT  &kp UP_ARROW    &kp PRINTSCREEN         &trans             &trans
-&trans  &trans        &trans           &trans        &trans              &kp LESS_THAN  &to 2                     &to 0   &kp GREATER_THAN  &kp LEFT_ARROW       &kp DOWN_ARROW  &kp RIGHT_ARROW         &trans             &trans
-                                                     &trans              &trans         &trans  &trans    &trans  &trans  &trans            &trans
+&trans  &kp NUMBER_1     &kp NUMBER_2     &kp NUMBER_3  &kp NUMBER_4        &kp NUMBER_5                                     &kp NUMBER_6      &kp NUMBER_7         &kp NUMBER_8    &NINE_PLUS       &ZERO_EQUALS  &trans
+&trans  &kp PRINTSCREEN  &kp PAUSE_BREAK  &kp INSERT    &OPEN_PAREN_SQBRKT  &kp BACKSLASH                                    &kp SLASH         &CLOSE_PAREN_SQBRKT  &kp UP_ARROW    &QUESTION_PIPE   &trans        &trans
+&trans  &trans           &trans           &trans        &trans              &kp LESS_THAN  &to 2                     &to 0   &kp GREATER_THAN  &kp LEFT_ARROW       &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans        &trans
+                                                        &trans              &trans         &trans  &trans    &trans  &trans  &trans            &trans
             >;
         };
 
