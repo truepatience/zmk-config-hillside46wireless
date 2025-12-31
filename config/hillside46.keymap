@@ -114,10 +114,10 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        UNDERSCORE_ASTERISK: UNDERSCORE_ASTERISK {
+        ZERO_TILDE: ZERO_TILDE {
             compatible = "zmk,behavior-mod-morph";
-            label = "UNDERSCORE_ASTERISK";
-            bindings = <&kp UNDERSCORE>, <&kp ASTERISK>;
+            label = "ZERO_TILDE";
+            bindings = <&kp KP_NUMBER_0>, <&kp TILDE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -172,9 +172,9 @@
  */
 
             bindings = <
-&trans  &kp NUMBER_1     &kp NUMBER_2     &kp NUMBER_3  &kp NUMBER_4        &kp NUMBER_5                                     &kp NUMBER_6      &kp NUMBER_7         &kp NUMBER_8    &NINE_PLUS       &kp NUMBER_0  &trans
-&trans  &kp PRINTSCREEN  &kp PAUSE_BREAK  &kp INSERT    &OPEN_PAREN_SQBRKT  &kp BACKSLASH                                    &kp SLASH         &CLOSE_PAREN_SQBRKT  &kp UP_ARROW    &QUESTION_PIPE   &trans        &trans
-&trans  &trans           &trans           &trans        &trans              &kp LESS_THAN  &to 2                     &to 0   &kp GREATER_THAN  &kp LEFT_ARROW       &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans        &trans
+&trans  &kp NUMBER_1     &kp NUMBER_2     &kp NUMBER_3  &kp NUMBER_4        &kp NUMBER_5                                     &kp NUMBER_6      &kp NUMBER_7         &kp NUMBER_8    &NINE_PLUS       &ZERO_TILDE  &trans
+&trans  &kp PRINTSCREEN  &kp PAUSE_BREAK  &kp INSERT    &OPEN_PAREN_SQBRKT  &kp BACKSLASH                                    &kp SLASH         &CLOSE_PAREN_SQBRKT  &kp UP_ARROW    &QUESTION_PIPE   &trans       &trans
+&trans  &trans           &trans           &trans        &trans              &kp LESS_THAN  &to 2                     &to 0   &kp GREATER_THAN  &kp LEFT_ARROW       &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans       &trans
                                                         &trans              &trans         &trans  &trans    &trans  &trans  &trans            &trans
             >;
         };
