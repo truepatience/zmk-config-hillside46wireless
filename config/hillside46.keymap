@@ -78,19 +78,19 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        COMMA_SEMICOLON: COMMA_SEMICOLON {
+        COMMA_ASTERISK: COMMA_ASTERISK {
             compatible = "zmk,behavior-mod-morph";
-            label = "COMMA_SEMICOLON";
-            bindings = <&kp DE_COMMA>, <&kp SEMICOLON>;
+            label = "COMMA_ASTERISK";
+            bindings = <&kp DE_COMMA>, <&kp ASTERISK>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        PERIOD_COLON: PERIOD_COLON {
+        PERIOD_EQUALS: PERIOD_EQUALS {
             compatible = "zmk,behavior-mod-morph";
-            label = "PERIOD_COLON";
-            bindings = <&kp PERIOD>, <&kp COLON>;
+            label = "PERIOD_EQUALS";
+            bindings = <&kp PERIOD>, <&kp KP_EQUAL>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -114,15 +114,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        ZERO_HYPHEN: ZERO_HYPHEN {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ZERO_HYPHEN";
-            bindings = <&kp DE_N0>, <&kp DE_MINUS>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         UNDERSCORE_ASTERISK: UNDERSCORE_ASTERISK {
             compatible = "zmk,behavior-mod-morph";
             label = "UNDERSCORE_ASTERISK";
@@ -132,19 +123,19 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        LAYER_ASTERISK: LAYER_ASTERISK {
+        LAYER_SEMICOLON: LAYER_SEMICOLON {
             compatible = "zmk,behavior-mod-morph";
-            label = "LAYER_ASTERISK";
-            bindings = <&to 1>, <&kp ASTERISK>;
+            label = "LAYER_SEMICOLON";
+            bindings = <&to 1>, <&kp SEMICOLON>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        LAYER_EQUALS: LAYER_EQUALS {
+        LAYER_COLON: LAYER_COLON {
             compatible = "zmk,behavior-mod-morph";
-            label = "LAYER_EQUALS";
-            bindings = <&to 2>, <&kp DE_EQUAL>;
+            label = "LAYER_COLON";
+            bindings = <&to 2>, <&kp COLON>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -164,10 +155,10 @@
  */
 
             bindings = <
-&mt ESCAPE TAB    &kp Q  &kp W  &kp E  &kp R       &kp T                                                                   &kp Y    &kp U       &kp I             &kp O          &kp P           &BACKSPACE_DELETE
-&LEFT_SHIFT_CAPS  &kp A  &kp S  &kp D  &kp F       &kp G                                                                   &kp H    &kp J       &kp K             &kp L          &kp APOSTROPHE  &RIGHT_SHIFT_CAPS
-&kp LCTRL         &kp Z  &kp X  &kp C  &kp V       &kp B     &LAYER_ASTERISK                                &LAYER_EQUALS  &kp N    &kp M       &COMMA_SEMICOLON  &PERIOD_COLON  &kp MINUS       &kp RCTRL
-                                       &LALT_LGUI  &kp HOME  &kp ENTER        &kp PAGE_UP    &kp PAGE_DOWN  &kp SPACE      &kp END  &RALT_RGUI
+&mt ESCAPE TAB    &kp Q  &kp W  &kp E  &kp R       &kp T                                                                   &kp Y    &kp U       &kp I            &kp O           &kp P           &BACKSPACE_DELETE
+&LEFT_SHIFT_CAPS  &kp A  &kp S  &kp D  &kp F       &kp G                                                                   &kp H    &kp J       &kp K            &kp L           &kp APOSTROPHE  &RIGHT_SHIFT_CAPS
+&kp LCTRL         &kp Z  &kp X  &kp C  &kp V       &kp B     &LAYER_SEMICOLON                                &LAYER_COLON  &kp N    &kp M       &COMMA_ASTERISK  &PERIOD_EQUALS  &kp MINUS       &kp RCTRL
+                                       &LALT_LGUI  &kp HOME  &kp ENTER         &kp PAGE_UP    &kp PAGE_DOWN  &kp SPACE     &kp END  &RALT_RGUI
             >;
         };
 
@@ -181,7 +172,7 @@
  */
 
             bindings = <
-&trans  &kp NUMBER_1     &kp NUMBER_2     &kp NUMBER_3  &kp NUMBER_4        &kp NUMBER_5                                     &kp NUMBER_6      &kp NUMBER_7         &kp NUMBER_8    &NINE_PLUS       &ZERO_HYPHEN  &trans
+&trans  &kp NUMBER_1     &kp NUMBER_2     &kp NUMBER_3  &kp NUMBER_4        &kp NUMBER_5                                     &kp NUMBER_6      &kp NUMBER_7         &kp NUMBER_8    &NINE_PLUS       &kp NUMBER_0  &trans
 &trans  &kp PRINTSCREEN  &kp PAUSE_BREAK  &kp INSERT    &OPEN_PAREN_SQBRKT  &kp BACKSLASH                                    &kp SLASH         &CLOSE_PAREN_SQBRKT  &kp UP_ARROW    &QUESTION_PIPE   &trans        &trans
 &trans  &trans           &trans           &trans        &trans              &kp LESS_THAN  &to 2                     &to 0   &kp GREATER_THAN  &kp LEFT_ARROW       &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans        &trans
                                                         &trans              &trans         &trans  &trans    &trans  &trans  &trans            &trans
