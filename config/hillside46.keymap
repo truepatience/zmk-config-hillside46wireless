@@ -90,7 +90,7 @@
         PERIOD_EQUALS: PERIOD_EQUALS {
             compatible = "zmk,behavior-mod-morph";
             label = "PERIOD_EQUALS";
-            bindings = <&kp PERIOD>, <&kp KP_EQUAL>;
+            bindings = <&kp PERIOD>, <&kp EQUAL>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
