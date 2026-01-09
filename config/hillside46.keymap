@@ -155,10 +155,10 @@
  */
 
             bindings = <
-&trans  &kp NUMBER_1     &kp NUMBER_2     &kp NUMBER_3  &kp NUMBER_4        &kp NUMBER_5                                     &kp NUMBER_6      &kp NUMBER_7         &kp NUMBER_8    &NINE_PLUS       &ZERO_TILDE  &trans
-&trans  &kp PRINTSCREEN  &kp PAUSE_BREAK  &kp INSERT    &OPEN_PAREN_SQBRKT  &kp BACKSLASH                                    &kp SLASH         &CLOSE_PAREN_SQBRKT  &kp UP_ARROW    &QUESTION_PIPE   &trans       &trans
-&trans  &trans           &trans           &trans        &kp SEMICOLON       &kp LESS_THAN  &to 2                     &to 0   &kp GREATER_THAN  &kp LEFT_ARROW       &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans       &trans
-                                                        &trans              &trans         &trans  &trans    &trans  &trans  &trans            &trans
+&trans  &kp NUMBER_1     &kp NUMBER_2     &kp NUMBER_3  &kp NUMBER_4      &kp NUMBER_5                                     &kp NUMBER_6      &kp NUMBER_7       &kp NUMBER_8    &kp NUMBER_9     &kp NUMBER_0  &trans
+&trans  &kp PRINTSCREEN  &kp PAUSE_BREAK  &kp INSERT    &kp LEFT_BRACKET  &kp BACKSLASH                                    &kp SLASH         &kp RIGHT_BRACKET  &kp UP_ARROW    &kp SEMICOLON    &trans        &trans
+&trans  &trans           &trans           &trans        &trans            &kp LESS_THAN  &to 2                     &to 0   &kp GREATER_THAN  &kp LEFT_ARROW     &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans        &trans
+                                                        &trans            &trans         &trans  &trans    &trans  &trans  &trans            &trans
             >;
         };
 
