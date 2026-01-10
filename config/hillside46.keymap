@@ -145,10 +145,10 @@
  */
 
             bindings = <
-&trans  &kp NUMBER_1     &kp NUMBER_2     &kp NUMBER_3  &kp NUMBER_4      &kp NUMBER_5                                     &kp NUMBER_6  &kp NUMBER_7       &kp NUMBER_8    &kp NUMBER_9     &kp NUMBER_0   &trans
-&trans  &kp PRINTSCREEN  &kp PAUSE_BREAK  &kp INSERT    &kp LEFT_BRACKET  &kp BACKSLASH                                    &kp SLASH     &kp RIGHT_BRACKET  &kp UP_ARROW    &kp EQUAL        &kp SEMICOLON  &trans
-&trans  &trans           &trans           &trans        &trans            &trans         &trans                    &trans  &trans        &kp LEFT_ARROW     &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans         &trans
-                                                        &to 2             &trans         &trans  &trans    &trans  &trans  &trans        &to 0
+&trans  &kp NUMBER_1     &kp NUMBER_2     &kp NUMBER_3  &kp NUMBER_4      &kp NUMBER_5                                     &kp NUMBER_6      &kp NUMBER_7       &kp NUMBER_8    &kp NUMBER_9     &kp NUMBER_0   &trans
+&trans  &kp PRINTSCREEN  &kp PAUSE_BREAK  &kp INSERT    &kp LEFT_BRACKET  &kp LESS_THAN                                    &kp GREATER_THAN  &kp RIGHT_BRACKET  &kp UP_ARROW    &kp EQUAL        &kp SEMICOLON  &trans
+&trans  &trans           &trans           &trans        &trans            &trans         &trans                    &trans  &trans            &kp LEFT_ARROW     &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans         &trans
+                                                        &to 2             &trans         &trans  &trans    &trans  &trans  &trans            &to 0
             >;
 
             sensor-bindings =
