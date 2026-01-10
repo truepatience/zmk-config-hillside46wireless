@@ -143,6 +143,10 @@
 &kp LCTRL         &kp Z  &kp X  &kp C  &kp V       &kp B     &to 1                                    &to 2      &kp N    &kp M       &COMMA_ASTERISK  &PERIOD_EQUALS  &kp MINUS       &kp RCTRL
                                        &LALT_LGUI  &kp HOME  &kp ENTER  &kp PAGE_UP    &kp PAGE_DOWN  &kp SPACE  &kp END  &RALT_RGUI
             >;
+
+            sensor-bindings =
+                <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>,
+                <&inc_dec_kp LEFT_ARROW RIGHT_ARROW>;
         };
 
         numsym_layer {
