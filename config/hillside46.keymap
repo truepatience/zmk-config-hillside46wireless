@@ -42,20 +42,6 @@
             bindings = <&kp RIGHT_ALT>, <&kp RIGHT_GUI>;
         };
 
-        OPEN_PAREN_SQBRKT: OPEN_PAREN_SQBRKT {
-            compatible = "zmk,behavior-tap-dance";
-            label = "OPEN_PAREN_SQBRKT";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_PARENTHESIS>, <&kp LEFT_BRACKET>;
-        };
-
-        CLOSE_PAREN_SQBRKT: CLOSE_PAREN_SQBRKT {
-            compatible = "zmk,behavior-tap-dance";
-            label = "CLOSE_PAREN_SQBRKT";
-            #binding-cells = <0>;
-            bindings = <&kp RIGHT_PARENTHESIS>, <&kp RIGHT_BRACKET>;
-        };
-
         LEFT_SHIFT_CAPS: LEFT_SHIFT_CAPS {
             compatible = "zmk,behavior-tap-dance";
             label = "LEFT_SHIFT_CAPS";
@@ -79,10 +65,10 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        BACKSLASH_ASTERISK: BACKSLASH_ASTERISK {
+        COMMA_ASTERISK: COMMA_ASTERISK {
             compatible = "zmk,behavior-mod-morph";
-            label = "BACKSLASH_ASTERISK";
-            bindings = <&kp BACKSLASH>, <&kp ASTERISK>;
+            label = "COMMA_ASTERISK";
+            bindings = <&kp COMMA>, <&kp ASTERISK>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -138,10 +124,10 @@
  */
 
             bindings = <
-&mt ESCAPE TAB    &kp Q  &kp W  &kp E  &kp R  &kp T                                                               &kp Y       &kp U  &kp I      &kp O       &kp P           &BACKSPACE_DELETE
-&LEFT_SHIFT_CAPS  &kp A  &kp S  &kp D  &kp F  &kp G                                                               &kp H       &kp J  &kp K      &kp L       &kp APOSTROPHE  &RIGHT_SHIFT_CAPS
-&kp LCTRL         &kp Z  &kp X  &kp C  &kp V  &kp B       &kp HOME                                     &kp END    &kp N       &kp M  &kp COMMA  &kp PERIOD  &kp SLASH       &kp RCTRL
-                                       &to 1  &LALT_LGUI  &kp ENTER  &BACKSLASH_ASTERISK    &kp MINUS  &kp SPACE  &RALT_RGUI  &to 2
+&mt ESCAPE TAB    &kp Q  &kp W  &kp E  &kp R  &kp T                                                         &kp Y       &kp U  &kp I            &kp O           &kp P           &BACKSPACE_DELETE
+&LEFT_SHIFT_CAPS  &kp A  &kp S  &kp D  &kp F  &kp G                                                         &kp H       &kp J  &kp K            &kp L           &kp APOSTROPHE  &RIGHT_SHIFT_CAPS
+&kp LCTRL         &kp Z  &kp X  &kp C  &kp V  &kp B       &kp HOME                               &kp END    &kp N       &kp M  &COMMA_ASTERISK  &PERIOD_EQUALS  &kp MINUS       &kp RCTRL
+                                       &to 1  &LALT_LGUI  &kp ENTER  &kp BACKSLASH    &kp SLASH  &kp SPACE  &RALT_RGUI  &to 2
             >;
 
             sensor-bindings =
@@ -159,9 +145,9 @@
  */
 
             bindings = <
-&trans  &kp NUMBER_1     &kp NUMBER_2     &kp NUMBER_3  &kp NUMBER_4      &kp NUMBER_5                                     &kp NUMBER_6  &kp NUMBER_7       &kp NUMBER_8    &kp NUMBER_9     &kp NUMBER_0  &trans
-&trans  &kp PRINTSCREEN  &kp PAUSE_BREAK  &kp INSERT    &kp LEFT_BRACKET  &kp BACKSLASH                                    &kp SLASH     &kp RIGHT_BRACKET  &kp UP_ARROW    &kp SEMICOLON    &trans        &trans
-&trans  &trans           &trans           &trans        &trans            &trans         &trans                    &trans  &trans        &kp LEFT_ARROW     &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans        &trans
+&trans  &kp NUMBER_1     &kp NUMBER_2     &kp NUMBER_3  &kp NUMBER_4      &kp NUMBER_5                                     &kp NUMBER_6  &kp NUMBER_7       &kp NUMBER_8    &kp NUMBER_9     &kp NUMBER_0   &trans
+&trans  &kp PRINTSCREEN  &kp PAUSE_BREAK  &kp INSERT    &kp LEFT_BRACKET  &kp BACKSLASH                                    &kp SLASH     &kp RIGHT_BRACKET  &kp UP_ARROW    &kp EQUAL        &kp SEMICOLON  &trans
+&trans  &trans           &trans           &trans        &trans            &trans         &trans                    &trans  &trans        &kp LEFT_ARROW     &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans         &trans
                                                         &to 2             &trans         &trans  &trans    &trans  &trans  &trans        &to 0
             >;
 
