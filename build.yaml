@@ -22,6 +22,8 @@ include:
     shield: hillside46_right
   - board: nice_nano//zmk
     shield: settings_reset
+    snippet: studio-rpc-usb-uart # This ensures the modern runner processes it correctly
+    cmake-args: -DCONFIG_ZMK_BOARD_COMPAT=y
     
 # Hillside 48
 #   Comment out below if you do not have this board, to save build time
