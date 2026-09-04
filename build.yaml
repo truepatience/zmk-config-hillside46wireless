@@ -20,7 +20,9 @@ include:
     shield: hillside46_left
   - board: nice_nano//zmk
     shield: hillside46_right
-
+  - board: nice_nano//zmk
+    shield: settings_reset
+    
 # Hillside 48
 #   Comment out below if you do not have this board, to save build time
 #  - board: nice_nano_v2
