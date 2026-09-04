@@ -83,15 +83,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        NINE_PLUS: NINE_PLUS {
-            compatible = "zmk,behavior-mod-morph";
-            label = "NINE_PLUS";
-            bindings = <&kp KP_NUMBER_9>, <&kp PLUS>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         ZERO_TILDE: ZERO_TILDE {
             compatible = "zmk,behavior-mod-morph";
             label = "ZERO_TILDE";
