@@ -23,6 +23,12 @@
 #define Paste  LC(V)
 #define Redo   LC(Y)
 
+/ {
+    /* Add this empty placeholder to satisfy the early keymap compiler pass */
+    led_strip: led_strip {
+        status = "disabled";
+    };
+};
 
 / {
         keymap {
