@@ -6,6 +6,12 @@
 
 #include "hillside46.dtsi" 
 
+/ {
+    chosen {
+        zmk,underglow = &led_strip;
+    };
+};
+
 &default_transform {
     col-offset = <6>;
 };
